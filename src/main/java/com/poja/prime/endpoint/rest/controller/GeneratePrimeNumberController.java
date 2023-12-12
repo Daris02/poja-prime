@@ -16,6 +16,6 @@ public class GeneratePrimeNumberController {
     public BigInteger generatePrime() {
         SecureRandom random = new SecureRandom();
 
-        return new BigInteger(10_000, 99, random);
+        return new BigInteger(5_000, 99, random);
     }
 }

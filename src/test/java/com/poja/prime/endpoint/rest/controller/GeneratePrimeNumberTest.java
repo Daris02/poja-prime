@@ -17,6 +17,6 @@ public class GeneratePrimeNumberTest {
 
         assertTrue("The number is not probable prime", prime.isProbablePrime(99));
 
-        assertEquals("The number length is not 10000 bits", 10_000, prime.bitLength());
+        assertEquals("The number length is not 10000 bits", 5_000, prime.bitLength());
     }
 }
