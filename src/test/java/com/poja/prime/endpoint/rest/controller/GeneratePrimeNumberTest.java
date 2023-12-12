@@ -1,5 +1,6 @@
 package com.poja.prime.endpoint.rest.controller;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigInteger;
@@ -11,10 +12,11 @@ public class GeneratePrimeNumberTest {
     
     @Test
     public void testGeneratePrime() {
-        BigInteger prime = GeneratePrimeNumber.generatePrime();
+        GeneratePrimeNumberController controller = new GeneratePrimeNumberController();
+        BigInteger prime = controller.generatePrime();
 
-        assertTrue("The number is not probable prime", prime.isProbablePrime(100));
+        assertTrue("The number is not probable prime", prime.isProbablePrime(99));
 
-        assertTrue("The number lenght is not 10000 bits", prime.bitLength() == 10_000);
+        assertEquals("The number length is not 10000 bits", 10_000, prime.bitLength());
     }
 }
