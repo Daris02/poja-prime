@@ -16,17 +16,6 @@ public class GeneratePrimeNumberController {
     public BigInteger generatePrime() {
         SecureRandom random = new SecureRandom();
 
-        BigInteger primeNumber = new BigInteger(10_000, 99, random);
-
-        primeNumber = primeNumber.setBit(10_000);
-
-        // while (!primeNumber.isProbablePrime(99)) {
-        //    primeNumber = primeNumber.add(BigInteger.TWO);
-        // }
-        if (primeNumber.isProbablePrime(99)) {
-            return primeNumber;
-        } else {
-            return generatePrime();
-        }
+        return new BigInteger(10_000, 99, random);
     }
 }
